@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment 1</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+
+
+
+</head>
+
+<body>
+
+
+    <main class="grid-container">
+
+        <div class="header">
+            <section>
+                <h1>COMP 3512 Assign 1 <span class="subtitle">CJ Dulay</span></h1>
+                <!-- /* CSS Loader source: https://loading.io/css/ */-->
+                <div id="loader1" class="lds-ellipsis">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </section>
+        </div>
+
+
+
+        <div class="gal-list">
+            <section>
+
+                <h2> Galleries List </h2>
+                <button id="toggleOff">Toggle List</button>
+                <ul id="galleryList"></ul>
+            </section>
+        </div>
+
+        <button id="toggleOn">Toggle List</button>
+
+
+
+        <div class="gal-info">
+            <section>
+                <h2 id="galleryName"> Gallery Info </h2>
+                <label>Native Name:</label>
+                <span id="galleryNative"></span>
+                <br>
+                <label>City:</label>
+                <span id="galleryCity"></span>
+                <br>
+                <label>Address:</label>
+                <span id="galleryAddress"></span>
+                <br>
+                <label>Country:</label>
+                <span id="galleryCountry"></span>
+                <br>
+                <label>Gallery Website:</label>
+                <span><a href="" id="galleryWebSite"></a></span>
+                <br>
+            </section>
+        </div>
+
+        <div id="m" class="map">
+            <section>
+                <h2> Map </h2>
+            </section>
+        </div>
+
+        <div class="paintings">
+            <section>
+                <div id="loader2" class="lds-ellipsis">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <h2> Paintings </h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th id="artist">Artist</th>
+                            <th id="title">Title</th>
+                            <th id="year">Year</th>
+                        </tr>
+                    </thead>
+                    <tbody id="imgPaintings">
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <div class="largerPainting">
+            <section>
+
+
+
+                <h2 id="paintTitle"></h2>
+                <h3 id="artistName"></h3>
+
+
+
+                <div id="imageLarge"></div>
+
+                <!-- Obtained from https://www.w3schools.com/howto/howto_css_modal_images.asp -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+
+
+                <br>
+
+                <label>Gallery Name:</label>
+                <span id="gName"></span>
+                <br>
+
+                <label>Gallery City:</label>
+                <span id="gCity"></span>
+                <br>
+
+                <label>Museum Link:</label>
+                <span><a href="" id="mLink"></a></span>
+                <br>
+                <label>Copyright Text:</label>
+                <span id="copyright"></span>
+                <br>
+
+                <label>Year of Work:</label>
+                <span id="yOW"></span>
+                <br>
+
+                <label>Width:</label>
+                <span id="width"></span>
+                <br>
+
+                <label>Height:</label>
+                <span id="height"></span>
+                <br>
+
+                <label>Medium:</label>
+                <span id="medium"></span>
+                <br>
+
+                <label>Description:</label>
+                <span id="desc"></span>
+                <br>
+
+
+
+                <button id="closeButton">Default View</button>
+
+            </section>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+    <script src="js/index.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDq0_wPB2vKrrQ3j4Iu1MTEliVmKa0Zy00&callback=initMap" async defer></script>
+</body>
+
+</html>
