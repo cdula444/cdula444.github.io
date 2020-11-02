@@ -1,0 +1,292 @@
+#m {
+    height: 500px;
+}
+
+body,
+html {
+    margin: 0;
+    background-color: #e9e9e9;
+    font-family: Open Sans, sans-serif;
+    font-size: 1rem;
+    background-image: url(images/pexels-josh-hild-2422253.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* Free from https://www.pexels.com/search/museum%20art/ */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    /* 0.5fr 0.9fr 1.6fr 0.6fr 1.4fr 1fr 1fr */
+    gap: 8px 8px;
+    grid-template-areas: "header header header header" "gal-list gal-list gal-list gal-list" "gal-info map map map" "gal-info map map map" "paintings paintings paintings paintings" "paintings paintings paintings paintings" "paintings paintings paintings paintings" "large-paint large-paint large-paint large-paint" "large-paint large-paint large-paint large-paint";
+}
+
+#imageLarge img:hover,
+.paintings img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+h1 {
+    padding: 0 2rem 0 2rem;
+}
+
+h2 {
+    padding: 0 2rem 0 2rem;
+}
+
+span.subtitle {
+    float: right;
+}
+
+table {
+    width: 100%;
+}
+
+table th {
+    text-align: left;
+}
+
+tr:nth-child(even),
+th {
+    background-color: #f2f2f2;
+}
+
+span {
+    display: inline;
+}
+
+.header {
+    grid-area: header;
+    background-color: white;
+    display: block;
+    border-radius: 1em;
+    border: solid black;
+}
+
+.gal-list {
+    grid-area: gal-list;
+    background-color: white;
+    display: block;
+    text-align: center;
+    border-radius: 1em;
+    border: solid black;
+}
+
+.gal-list li {
+    text-align: center;
+    display: inline;
+    padding: 0;
+    margin: 1em;
+}
+
+.gal-list li:hover {
+    text-decoration: underline;
+    color: #00ffff;
+    cursor: pointer;
+}
+
+ul#galleryList {
+    width: 94%;
+}
+
+.gal-info {
+    grid-area: gal-info;
+    background-color: white;
+    display: block;
+    border-radius: 1em;
+    text-align: center;
+    border: solid black;
+}
+
+.gal-info section {
+    margin-top: 10em;
+}
+
+.paintings {
+    grid-area: paintings;
+    background-color: white;
+    display: block;
+    border-radius: 1em;
+    border: solid black;
+    margin: 0.5em 2em 0 2em;
+}
+
+.map {
+    grid-area: map;
+    background-color: white;
+    display: block;
+    border-radius: 1em;
+}
+
+#toggleOn {
+    position: fixed;
+    left: 47.5%;
+    top: 3%;
+}
+
+th:hover {
+    text-decoration: underline;
+    color: #00ffff;
+    cursor: pointer;
+}
+
+
+/* https://stackoverflow.com/questions/6256043/css-position-loading-indicator-in-the-center-of-the-screen */
+
+#loader1,
+#loader2 {
+    position: fixed;
+    left: 47.5%;
+    top: 1%;
+    height: 31px;
+    width: 31px;
+}
+
+.largerPainting {
+    grid-area: large-paint;
+    background-color: white;
+    display: block;
+    border-radius: 1em;
+    margin: 3em;
+    text-align: center;
+    padding: 1em;
+}
+
+div.gal-list section li {
+    list-style-type: none;
+}
+
+div.gal-list section {
+    display: none;
+}
+
+
+/* The Modal (background) Obtained from  https://www.w3schools.com/howto/howto_css_modal_images.asp */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content (image) Obtained from  https://www.w3schools.com/howto/howto_css_modal_images.asp */
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#closeButton {
+    margin: 2em 0 2em 0;
+}
+
+
+/* The Close Button Obtained from  https://www.w3schools.com/howto/howto_css_modal_images.asp */
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* CSS Loader source: https://loading.io/css/ */
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: black;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
+}
